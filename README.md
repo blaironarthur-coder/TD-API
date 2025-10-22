@@ -30,7 +30,7 @@ api-node-ts/
 # 1) Installer les dépendances
 npm install
 
-# 2) (optionnel) Ajuster le port
+# 2) Ajuster le port
 #   - fichier .env (inclus) : PORT=4000
 
 # 3) Lancer en dev (TypeScript à la volée via ts-node + nodemon)
@@ -47,11 +47,8 @@ npm start
 
 ## Routes
 
-### Exigées par le barème
 - `GET /users` → retourne la liste complète des utilisateurs *(stockage en mémoire)*.
 - `POST /users` → crée un utilisateur `{ name, email }` (validation simple d’email, doublons interdits).
-
-### Bonus (CRUD complet)
 - `GET /users/:id` → retourne un utilisateur par id.
 - `PUT /users/:id` → met à jour `name` et/ou `email` (validation incluse).
 - `DELETE /users/:id` → supprime un utilisateur par id.
