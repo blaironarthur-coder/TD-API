@@ -1,0 +1,33 @@
+{
+  "name": "api-node-ts",
+  "version": "1.0.0",
+  "description": "API REST Node.js + TypeScript (GET/POST /users) avec contrôleurs, routes, .env, et stockage en mémoire.",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "node dist/index.js",
+    "dev": "nodemon src/index.ts",
+    "build": "tsc",
+    "lint": "echo \"(optionnel) ajoutez ESLint si besoin\" && exit 0",
+    "test:curl:get": "curl -i http://localhost:${PORT:-4000}/users",
+    "test:curl:post": "curl -i -X POST http://localhost:${PORT:-4000}/users -H \"Content-Type: application/json\" -d '{\"name\":\"Alice\",\"email\":\"alice@example.com\"}'"
+  },
+  "keywords": [
+    "express",
+    "typescript",
+    "node",
+    "api"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.7.5",
+    "nodemon": "^3.1.7",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3"
+  }
+}
